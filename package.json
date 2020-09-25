@@ -2,11 +2,18 @@
   "name": "@friends-library/doc-html",
   "version": "1.0.0",
   "description": "html for document consumables",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "author": "Jared Henderson <jared@netrivet.com>",
+  "repository": "github:friends-library-dev/doc-html",
+  "sideEffects": false,
   "license": "MIT",
   "scripts": {
-    "compile": "cd ../../ && yarn compile doc-html"
+    "test": "npx jest .",
+    "ts:check": "npx tsc --noEmit -p .",
+    "lint": "npx eslint '**/*.{ts,tsx,js}'",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "npx prettier \"**/*.{ts,tsx,js}\" --write",
+    "format:check": "npx prettier \"**/*.{ts,tsx,js}\" --check"
   },
   "dependencies": {
     "@friends-library/adoc-utils": "1.0.0",
@@ -15,5 +22,18 @@
     "moment": "^2.24.0",
     "roman-numerals": "^0.3.2",
     "strip-indent": "^3.0.0"
+  },
+  "devDependencies": {
+    "@friends-library/eslint-plugin": "1.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-no-only-tests": "^2.4.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": ">=25.0.0",
+    "prettier": "^2.1.2",
+    "ts-jest": ">=25.0.0",
+    "typescript": ">=3.9.5"
   }
 }
