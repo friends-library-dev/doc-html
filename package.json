@@ -19,15 +19,15 @@
     "prepublishOnly": "npm run compile"
   },
   "dependencies": {
-    "@friends-library/adoc-utils": "1.0.0",
-    "@friends-library/lulu": "1.0.0",
-    "@friends-library/types": "1.0.0",
+    "@friends-library/adoc-utils": "^1.1.1",
+    "@friends-library/lulu": "^1.1.1",
+    "@friends-library/types": "^1.1.1",
     "moment": "^2.24.0",
     "roman-numerals": "^0.3.2",
     "strip-indent": "^3.0.0"
   },
   "devDependencies": {
-    "@friends-library/dev": "4.0.4",
+    "@friends-library/dev": "^4.0.8",
     "@types/jest": "^26.0.14"
   }
 }
