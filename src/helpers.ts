@@ -23,7 +23,10 @@ export function capitalizeTitle(str: string, lang: Lang): string {
 }
 
 export function trimTrailingPunctuation(str: string): string {
-  return str.replace(/(?<!etc)[.,]$/, ``);
+  if (str.endsWith(`etc.`)) {
+    return str;
+  }
+  return str.replace(/[.,]$/, ``);
 }
 
 export function removeMobi7Tags(html: Html): Html {
